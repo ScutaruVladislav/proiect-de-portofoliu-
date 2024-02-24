@@ -1,0 +1,588 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav {
+    background-color: rgb(96, 70, 70);
+    color: white;
+    padding: 20px 50px;
+}
+
+
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#cartIcon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 100px;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+.searchInput {
+    border: none;
+    background-color: transparent;
+
+}
+
+
+.searchInput::placeholder {
+    color: lightgray;
+}
+
+
+.limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+
+
+
+
+
+.slider {
+    background: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+}
+
+
+.sliderImg {
+    width: 900px;
+    height: 900px;
+    z-index: 1;
+}
+
+
+#jordan {
+    width: 800px;
+    height: 650px;
+}
+
+
+#blazer {
+    width: 800px;
+    height: 650px;
+}
+
+
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+}
+
+
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+.sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+
+.sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    z-index: 1;
+}
+
+
+.buyButton {
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 1px solid gray;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.buyButton:hover {
+    color: black;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+
+.sliderItem:nth-child(1) .sliderBg {
+    background-color: rgb(11, 128, 0);
+}
+
+
+.sliderItem:nth-child(2) .sliderBg {
+    background-color: rgb(23, 0, 128);
+}
+
+
+.sliderItem:nth-child(3) .sliderBg {
+    background-color: rgb(128, 119, 0);
+}
+
+
+.sliderItem:nth-child(4) .sliderBg {
+    background-color: rgb(128, 0, 47);
+}
+
+
+.sliderItem:nth-child(5) .sliderBg {
+    background-color: rgb(128, 0, 87);
+}
+
+
+.sliderItem:nth-child(1) .sliderPrice {
+    color: white;
+}
+
+
+.sliderItem:nth-child(2) .sliderPrice {
+   color: white;
+}
+
+
+.sliderItem:nth-child(3) .sliderPrice {
+    color: white;
+}
+
+
+.sliderItem:nth-child(4) .sliderPrice {
+    color: white;
+}
+
+
+.sliderItem:nth-child(5) .sliderPrice {
+    color: white;
+}
+
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.featureImg {
+    width: 50px;
+    height: 50px;
+}
+
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+
+
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+.payment{
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.7); 
+    box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.7);
+}
+
+
+
+.payTitle {
+    font-size: 20px;
+    color: rgb(153, 149, 149);
+}
+
+
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+.payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+
+.payInput::placeholder {
+    color: rgb(163, 163, 163);
+}
+
+
+.cardIcons {
+    display: flex;
+}
+
+
+.cardIcon {
+    margin-right: 10px;
+}
+
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.payInput.sm {
+    width: 30%;
+}
+
+
+.payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.7); 
+    box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.5);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.close {
+    position: absolute;
+    background-color: rgb(167, 162, 162);
+    color: white;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+
+.cart {
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 1750px;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.7); 
+    box-shadow: 0px 1px 17px 6px rgba(0,0,0,0.7);
+}
+
+
+.productImg {
+    width: 50%;
+}
+
+
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+
+
+.productTitle {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+
+.productDesc {
+    font-style: 24px;
+    color: gray;
+}
+
+
+.colors,.sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.color:nth-child(2) {
+    background-color: white;
+}
+
+
+.color:nth-child(3) {
+    background-color: grey;
+}
+
+
+
+.size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.productButton:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.gallery {
+    padding: 50px;
+    display: flex;
+}
+
+
+.galleryItem {
+    flex: 1;
+    padding: 50px;
+}
+
+
+.galleryImg {
+    width: 100%;
+}
+
+
+.newSeason {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    clip-path: polygon(0 12%, 100% 0, 100% 98%, 0 87%);
+}
+
+
+.nsItem {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.nsImg {
+    width: 480px;
+    height: 350px;
+}
+
+
+.nsTitle {
+    font-size: 40px;
+}
+
+
+.nsButton {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+footer {
+    display: flex;
+}
+
+
+.footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+.fMenuTitle {
+    font-size: 16px;
+}
+
+
+.fList {
+    padding: 0;
+    list-style: none;
+}
+
+
+.fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+
+.footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.fInput {
+    padding: 5px;
+}
+
+
+.fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+.fIcons {
+    display: flex;
+}
+
+
+.fIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.copyright {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
